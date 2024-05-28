@@ -16,6 +16,9 @@ class script(object):
 
 <b>DEVS:</b>
 - <a href=https://t.me/botuptest>Creator</a>"""
+    IMAGINE = """ How to Use example
+<code>/imagine a boy and girl looking a sky </code>
+You Can Create Your like pictures using by This command /imagine """
     PROMOTE = """<b>Yᴏᴜ ᴄᴀɴ ᴍᴀᴋᴇ ᴍᴇᴍʙᴇʀs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴ
  
 Bʏ ᴜsɪɴɢ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ. 
