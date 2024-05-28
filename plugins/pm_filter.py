@@ -564,6 +564,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('Eᴄʜᴏ ', callback_data='echo'),
             InlineKeyboardButton('Iᴍᴀɢᴇ ', callback_data='img')
         ], [
+            InlineKeyboardButton('Iᴍᴀɢɪɴᴇ ', callback_data='imgine')
+        ], [
             InlineKeyboardButton('⇌ Bᴀᴄᴋ ⇌', callback_data='help')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -596,6 +598,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.message.edit_text(
             text=script.FLTERS_TXT.format(query.from_user.mention),
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "imagine":
+        buttons = [[                        
+            InlineKeyboardButton('⇌ Bᴀᴄᴋ ⇌', callback_data='helpps')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await client.edit_message_media(
+            query.message.chat.id,
+            query.message.id,
+            InputMediaPhoto(random.choice(PICS))
+        )
+        await query.message.edit_text(
+            text=script.IMAGINE,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
